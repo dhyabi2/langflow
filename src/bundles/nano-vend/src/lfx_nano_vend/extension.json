@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.langflow.org/extension/v1.json",
+  "id": "lfx-nano-vend",
+  "version": "0.1.0",
+  "name": "Nano x402 Pay-Per-Call (Vend)",
+  "description": "Pay-per-call web extraction settled in Nano (XNO) via x402 — no API key, no signup.",
+  "lfx": {
+    "compat": ["1"]
+  },
+  "bundles": [
+    {
+      "name": "nano_vend",
+      "path": "components/nano_vend"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+[project]
+name = "lfx-nano-vend"
+version = "0.1.0"
+description = "VendExtract — a Langflow extension bundle for x402 pay-per-call web extraction in Nano (XNO)"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+license = { text = "MIT" }
+authors = [
+    { name = "Vend / PANDeveloper001", email = "contact@paypercall.dev" },
+]
+keywords = ["langflow", "lfx", "extension", "bundle", "x402", "nano", "pay-per-call"]
+
+dependencies = [
+    "lfx>=1.13.0.dev0,<2.0.0",
+    "httpx>=0.27.0,<1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dhyabi2/langflow"
+Documentation = "https://extract.paypercall.dev/"
+Repository = "https://github.com/dhyabi2/langflow"
+
+[project.entry-points."langflow.extensions"]
+lfx-nano-vend = "lfx_nano_vend"
+
+[build-system]
+requires = ["hatchling==1.31.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lfx_nano_vend"]
+include = ["src/lfx_nano_vend/extension.json", "src/lfx_nano_vend/components/**/*.py"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/lfx_nano_vend",
+    "extension.json",
+    "README.md",
+    "pyproject.toml",
+]

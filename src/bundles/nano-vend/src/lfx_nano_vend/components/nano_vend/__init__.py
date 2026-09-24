@@ -1,0 +1,1 @@
+"""VendExtract bundle — DataFrame and Message outputs."""
